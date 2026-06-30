@@ -66,9 +66,6 @@ class DisputeRepository:
     def __init__(self):
         self.db = get_db_connection()
 
-    def create_dispute(self, dispute: DisputeModel):
-        query = "INSERT INTO disputes (payment_id, reason, evidence, status) VALUES (%s, %s, %s, %s)"
-        return self.db.execute(query, [dispute.payment_id, dispute.reason, dispute.evidence, dispute.status])
 
     def get_dispute(self, dispute_id):
         query = "SELECT * FROM disputes WHERE id = %s"
