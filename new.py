@@ -22,15 +22,6 @@ class RefundModel:
         self.status = PaymentStatus.PENDING
 
 
-class DisputeModel:
-    """Dispute data model - NEW"""
-    def __init__(self, payment_id, reason, evidence):
-        self.payment_id = payment_id
-        self.reason = reason
-        self.evidence = evidence
-        self.status = "OPEN"
-
-
 class PaymentRepository:
     """Data access layer for payments"""
 
