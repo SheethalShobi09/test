@@ -38,7 +38,7 @@ class PaymentRepository:
 
     def update_payment_status(self, payment_id, status):
         query = "UPDATE payments SET status = %s WHERE id = %s"
-        return self.db.execute(query, [status, payment_id])
+       
 
 
 class RefundRepository:
